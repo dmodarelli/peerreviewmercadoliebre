@@ -19,7 +19,7 @@ p{
 
 div.top-header{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 5%;
 }
 /*
@@ -36,6 +36,7 @@ header{
 header div.logo,
 header .form{
     width: 50%;
+    flex-wrap: nowrap;
 }
 
 header div.logo{
@@ -45,20 +46,27 @@ header div.form{
     align-self:center ;
     padding: 2px;
     font-size: 11px;
+
 }
 
 header .form .submit{
     background-color: #FFF;
     border: 1px solid rgb(192, 170, 170);
     color: #666;
-    width: 20%;
+    width: 25%;
     height: 25px;
+    
+}
+
+.submit::placeholder{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 510;
 }
 
 /************ LISTAS NAV    **************/
 
 header nav{
-    display: flex;
+    /*display: flex;*/
     font-size: 12px;
     margin-left: 20px;
 }
@@ -90,7 +98,11 @@ header ul.right {
 
 div.burger-menu{
     text-align: center;
+    
 }
+ .burger-menu i{
+     display: none;
+ }
 
 div.burger-menu i{
     background-color: #0044AA;
@@ -127,6 +139,10 @@ div.offers{
 h3,
 .description{
     color: #666;
+}
+
+.listas{
+    display: none;
 }
 
 .description{
@@ -198,18 +214,22 @@ article div.main-article{
     /** modificacion **/
 header .form{
     display: block; 
+
 }
 div.burger-menu {
     display: block;
 }
 
-/****/
+/*.burger-menu i{
+    display:block;
+    text-align: center;
+}*/
 
-    main section article{
+main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    main section div.products{
+main section div.products{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -217,23 +237,25 @@ div.burger-menu {
         align-items: flex-start;
     }
     
-    main section div.products article{
+main section div.products article{
         width: 45%;
     }
 
-    .price,
-    .discount{
+.price,
+.discount{
         width: 50%;
     }
-
-    
-    
 }
 
 @media (min-width: 769px){
     main section div.products article{
         width: 22%;
     }
+    .listas.ul.left {
+        display:block;
+        
+    }
+      
 }
 /**** pie de pagina (footer)*****/
 
