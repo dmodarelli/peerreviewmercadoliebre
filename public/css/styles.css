@@ -66,7 +66,7 @@ header .form .submit{
 /************ LISTAS NAV    **************/
 
 header nav{
-    /*display: flex;*/
+    display: flex;
     font-size: 12px;
     margin-left: 20px;
 }
@@ -100,7 +100,8 @@ div.burger-menu{
     text-align: center;
     
 }
- .burger-menu i{
+
+ div.burger-menu{
      display: none;
  }
 
@@ -144,6 +145,7 @@ h3,
 .listas{
     display: none;
 }
+
 
 .description{
     display: none;
@@ -220,7 +222,8 @@ div.burger-menu {
     display: block;
 }
 
-/*.burger-menu i{
+/*
+.burger-menu i{
     display:block;
     text-align: center;
 }*/
@@ -251,10 +254,13 @@ main section div.products article{
     main section div.products article{
         width: 22%;
     }
-    .listas.ul.left {
-        display:block;
-        
+    
+   .listas{
+        display:inline-flex;
+        width: 100%;
+
     }
+    
       
 }
 /**** pie de pagina (footer)*****/
